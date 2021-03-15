@@ -23,6 +23,9 @@
       <p>
         <span>My Discord: {{ andremor }}</span>
       </p>
+      <p>
+        <span>My email: <a href="mailto:andre@gidget.xyz">andre@gidget.xyz</a></span>
+      </p>
     </div>
     <div id="home-right">
       <h1>
