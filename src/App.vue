@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <router-view :andremor="andremor" />
 </template>
 
 <style>
@@ -21,3 +21,23 @@ a {
   color: #0000ff;
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      andremor: "...",
+    }
+  },
+  created() {
+    this.getTag()
+  },
+  methods: {
+    getTag() {
+      this.axios.get("https://gidget.xyz/api/andremor").then(e => {
+        this.andremor = e.data;
+      });
+    }
+  }
+}
+</script>

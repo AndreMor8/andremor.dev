@@ -21,7 +21,7 @@
         list.</span
       >
     </p>
-    <ul>
+    <ul id="list">
       <li><span>Windows NT 3.1 RTM, Windows NT 3.50 and 3.51 RTM</span></li>
       <br />
       <span class="large"
@@ -124,6 +124,11 @@
 .code {
   background-color: rgb(177, 0, 0);
   color: #fff;
+}
+@media only screen and (max-width: 1024px) {
+  #list {
+    margin-left: -30px;
+  }
 }
 </style>
 

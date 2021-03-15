@@ -7,16 +7,11 @@
         <span>I'm hosted this page with a Windows machine. Look at the contents that I have now:</span>
       </p>
       <router-link to="my-vm-standard"><p>
-        <span>My standard of virtualizers when testing Windows betas.</span>
+        <span>My standard of virtualizers when testing Windows betas</span>
       </p></router-link>
       <p><span>Favorite song!:</span></p>
-      <iframe
-        width="410"
-        height="246"
-        src="https://www.youtube.com/embed/clE9Qg8_q88"
-      >
-      </iframe
-      ><br /><br />
+      <youtube-vue3 videoid="clE9Qg8_q88" :autoplay="0" />
+      <br /><br />
       <a href="https://wubbzy.fandom.com/wiki/User:AndreMor"
         ><span>Go to my user page on Wubbzypedia</span></a
       >
@@ -70,26 +65,17 @@
         display: block;
         position: relative;
     }
+    #youtube-vue-player-soma {
+      width: auto !important
+    }
 }
 </style>
 
 <script>
+import { YoutubeVue3 } from 'youtube-vue3'
 export default {
-  data() {
-    return {
-      andremor: "..."
-    }
-  },
+  props: ["andremor"],
   name: "Home",
-  created() {
-    this.getTag()
-  },
-  methods: {
-    getTag() {
-      this.axios.get("https://gidget.xyz/api/andremor").then(e => {
-        this.andremor = e.data;
-      });
-    }
-  }
+  components: { YoutubeVue3 }
 };
 </script>

@@ -13,7 +13,7 @@ const routes = [
     name: 'my-vm-standard',
     component: myStandard
   }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
