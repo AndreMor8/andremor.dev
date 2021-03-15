@@ -21,6 +21,9 @@
       <p>
         <span>My email: <a href="mailto:andre@gidget.xyz">andre@gidget.xyz</a></span>
       </p>
+      <p>
+        <span>My GitHub: <a href="https://github.com/AndreMor955">AndreMor955</a></span>
+      </p>
     </div>
     <div id="home-right">
       <h1>
