@@ -20,13 +20,16 @@
       </p>
     </div>
     <ul id="list">
-      <li><span>Windows NT 3.1 RTM, Windows NT 3.50 and 3.51 RTM</span></li>
+      <li>
+        <span>Windows NT 3.1 build 475+, Windows NT 3.50 and 3.51 RTM</span>
+      </li>
       <br />
       <div class="large">
         I recommend using VirtualBox, using OS Windows NT 3.x.<br /><br />If for
         some reason it fails, use Other Windows (32-bit).<br /><br />No, giving
         them specific names doesn't help.<br /><br />Use the VirtualBox video
-        driver that is compatible from NT 3.1 to Windows 7.
+        driver that is compatible from NT 3.1 to Windows 7.<br /><br />Get
+        networking with the AMD PC-NET driver.
       </div>
       <br /><br />
       <li>
@@ -108,7 +111,7 @@
       <div class="large">
         I recommend VMware.<br /><br />
         Get sound with VMware 7.0 drivers
-        <br><br>
+        <br /><br />
         For the pre-reset builds, with VMware 6.5-7.x support, with the default
         settings.<br /><br />Get special features with VMware 6.5.2 drivers<br /><br />More
         information here:
@@ -118,21 +121,21 @@
         <br /><br />
         For the post-reset builds: with VMware 10.x support, with the default
         settings.<br /><br />
-        Get special features with VMware 11.x drivers.<br /><br />More
+        Get special features with VMware 11.x WDDM drivers.<br /><br />More
         information here:
         <a
           href="https://www.betaarchive.com/forum/viewtopic.php?t=34077"
           target="_blank"
           >https://www.betaarchive.com/forum/viewtopic.php?t=34077</a
-        >
+        ><br /><br />For these two, remember to enable 3D acceleration.
       </div>
       <br /><br />
       <li><span>Windows 7 (any beta)</span></li>
       <br />
       <div class="large">
         I recommend VMware, with VMware 10.x support, with the default
-        settings.<br /><br />I have not tried Aero on this OS yet but I see that
-        with the 11.x drivers it should work. I will see that soon.
+        settings.<br /><br />Get Aero features with VMware 11.x WDDM drivers,
+        remember to enable 3D acceleration.
       </div>
       <br /><br />
       <li><span>Windows 8 and 10 (any beta)</span></li>
@@ -140,7 +143,7 @@
       <div class="large">
         With the exception of the Windows 8 builds that still have Aero, use
         VMware, with VMware 10.x support, with the default settings, using the
-        11.x drivers.<br /><br />After that, I don't think it makes sense to
+        11.x drivers with 3D acceleration enabled.<br /><br />After that, I don't think it makes sense to
         recommend virtualizers, after all they are recent systems, and any
         virtualizer should run them.<br /><br />If you still want my opinion,
         use VMware with the default options.
