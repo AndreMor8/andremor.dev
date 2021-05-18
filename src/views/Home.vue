@@ -4,7 +4,7 @@
       <h1><span>Hello World!</span></h1>
       <h2><span>I'm AndreMor</span></h2>
       <p>
-        <span>I'm hosted this page with a Windows machine. Look at the contents that I have now:</span>
+        <span>A 16 year old boy who likes computer science, programming and children's animation. Look at the contents that I have now:</span>
       </p>
       <router-link to="my-vm-standard"><p>
         <span>My standard of virtualizers when testing Windows betas</span>
