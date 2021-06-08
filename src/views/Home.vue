@@ -4,11 +4,16 @@
       <h1><span>Hello World!</span></h1>
       <h2><span>I'm AndreMor</span></h2>
       <p>
-        <span>A 16 year old boy who likes computer science, programming and children's animation. Look at the contents that I have now:</span>
+        <span
+          >A {{ myAge }} year old boy who likes computer science, programming
+          and children's animation. Look at the contents that I have now:</span
+        >
       </p>
-      <router-link to="my-vm-standard"><p>
-        <span>My standard of virtualizers when testing Windows betas</span>
-      </p></router-link>
+      <router-link to="my-vm-standard"
+        ><p>
+          <span>My standard of virtualizers when testing Windows betas</span>
+        </p></router-link
+      >
       <p><span>Favorite song!:</span></p>
       <youtube-vue3 videoid="clE9Qg8_q88" :autoplay="0" />
       <br /><br />
@@ -19,24 +24,48 @@
         <span>My Discord: {{ andremor }}</span>
       </p>
       <p>
-        <span>My email: <a href="mailto:andre@gidget.xyz">andre@gidget.xyz</a></span>
+        <span
+          >My email:
+          <a href="mailto:andre@gidget.xyz">andre@gidget.xyz</a></span
+        >
       </p>
       <p>
-        <span>My GitHub: <a href="https://github.com/AndreMor8">AndreMor8</a></span>
+        <span
+          >My GitHub: <a href="https://github.com/AndreMor8">AndreMor8</a></span
+        >
       </p>
     </div>
     <div id="home-right">
       <h1>
         <span>My other projects</span>
       </h1>
-      <p><span><a href="https://gidget.xyz">Gidget bot and dashboard</a></span></p>
-      <p><span><a href="https://wubb.ga">WWD website</a></span></p>
+      <p>
+        <span><a href="https://gidget.xyz">Gidget bot and dashboard</a></span>
+      </p>
+      <p>
+        <span><a href="https://wubb.ga">WWD website</a></span>
+      </p>
       <h1>
         <span>Where do you find me?</span>
       </h1>
-      <p><span><a href="https://discord.gg/5qx9ZcV">Wow Wow Discord</a> (Wubbzy things)</span></p>
-        <p><span><a href="https://discord.gg/g6ssSmK">MyBOT Team</a> (Discord bot related things)</span></p>
-        <p><span><a href="https://discord.gg/W2PYJA5rMd">Sonicrush007's server</a> (Testing with VMs)</span></p>
+      <p>
+        <span
+          ><a href="https://discord.gg/5qx9ZcV">Wow Wow Discord</a> (Wubbzy
+          things)</span
+        >
+      </p>
+      <p>
+        <span
+          ><a href="https://discord.gg/g6ssSmK">MyBOT Team</a> (Discord bot
+          related things)</span
+        >
+      </p>
+      <p>
+        <span
+          ><a href="https://discord.gg/W2PYJA5rMd">Sonicrush007's server</a>
+          (Testing with VMs)</span
+        >
+      </p>
     </div>
   </div>
 </template>
@@ -57,28 +86,40 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    body {
-        text-align: center !important;
-    }
-    #home-left {
-        display: block;
-        position: relative;
-    }
-    #home-right {
-        display: block;
-        position: relative;
-    }
-    #youtube-vue-player-soma {
-      width: auto !important
-    }
+  body {
+    text-align: center !important;
+  }
+  #home-left {
+    display: block;
+    position: relative;
+  }
+  #home-right {
+    display: block;
+    position: relative;
+  }
+  #youtube-vue-player-soma {
+    width: auto !important;
+  }
 }
 </style>
 
 <script>
-import { YoutubeVue3 } from 'youtube-vue3'
+import { YoutubeVue3 } from "youtube-vue3";
 export default {
   props: ["andremor"],
   name: "Home",
-  components: { YoutubeVue3 }
+  components: { YoutubeVue3 },
+  computed: {
+    myAge() {
+      //Doing this in milliseconds caused an inaccuracy.
+      const birthday = new Date("09 Aug 2004 GMT-5");
+      const today = new Date();
+      let age = today.getUTCFullYear() - birthday.getUTCFullYear();
+      if (today.getUTCMonth() == birthday.getUTCMonth()) {
+        if (today.getUTCDate() < birthday.getUTCDate()) age--;
+      } else if (today.getUTCMonth() < birthday.getUTCMonth()) age--;
+      return age;
+    },
+  },
 };
 </script>
