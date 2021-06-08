@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   font-family: "Dosis", sans-serif;
 }
 span {

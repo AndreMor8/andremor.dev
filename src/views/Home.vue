@@ -43,7 +43,7 @@
         <span><a href="https://gidget.xyz">Gidget bot and dashboard</a></span>
       </p>
       <p>
-        <span><a href="https://wubb.ga">WWD website</a></span>
+        <span><a href="https://wubbworld.xyz">Wubbworld website</a></span>
       </p>
       <h1>
         <span>Where do you find me?</span>
