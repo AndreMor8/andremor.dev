@@ -3,12 +3,13 @@
     <div id="home-left">
       <h1><span>Hello World!</span></h1>
       <h2><span>I'm AndreMor</span></h2>
-      <p>
+      <div class="resuming">
         <span
           >A {{ myAge }} year old boy who likes computer science, programming
-          and children's animation. Look at the contents that I have now:</span
+          and cartoon's animation for children.</span
         >
-      </p>
+      </div>
+      <div><span>Look at the contents that I have now:</span></div>
       <router-link to="my-vm-standard"
         ><p>
           <span>My standard of virtualizers when testing Windows betas</span>
@@ -66,11 +67,32 @@
           (Testing with VMs)</span
         >
       </p>
+      <div v-if="loaded">
+        <h1>
+          <span>What am I thinking/doing?</span>
+        </h1>
+        <p>
+          <span><b>Status</b> -> {{ getStatus }} </span>
+        </p>
+        <Presence
+          v-for="activity of activities"
+          :key="activity.id"
+          :type="activity.type"
+          :state="activity.state"
+          :name="activity.name"
+          :emoji="activity.emoji"
+          :details="activity.details"
+        ></Presence>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+.resuming {
+  padding-bottom: 8px;
+}
+
 #home-left {
   display: inline-block;
   position: absolute;
@@ -104,11 +126,15 @@
 </style>
 
 <script>
+import Presence from "../components/presence.vue";
 import { YoutubeVue3 } from "youtube-vue3";
 export default {
   props: ["andremor"],
+  data: function () {
+    return { loaded: false, status: "offline", activities: [] };
+  },
   name: "Home",
-  components: { YoutubeVue3 },
+  components: { YoutubeVue3, Presence },
   computed: {
     myAge() {
       //Doing this in milliseconds caused an inaccuracy.
@@ -119,6 +145,27 @@ export default {
         if (today.getUTCDate() < birthday.getUTCDate()) age--;
       } else if (today.getUTCMonth() < birthday.getUTCMonth()) age--;
       return age;
+    },
+    getStatus() {
+      const types = {
+        online: "🟢 Online",
+        idle: "🟡 Idle",
+        dnd: "🔴 Do not disturb",
+        offline: "⚫ Offline",
+      };
+      return types[this.status];
+    },
+  },
+  created: function () {
+    this.getPresence();
+  },
+  methods: {
+    getPresence() {
+      this.axios.get("https://gidget.xyz/api/presence").then((e) => {
+        this.status = e.data.status;
+        this.activities = this.activities.concat(e.data.activities);
+        this.loaded = true;
+      });
     },
   },
 };
