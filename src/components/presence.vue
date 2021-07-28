@@ -1,8 +1,6 @@
 <template>
   <p v-if="type === 4">
-    <span
-      ><b>{{ getEmoji }}</b> -> {{ state }}</span
-    >
+    <span>{{ getEmoji }}{{ state ? " -> " : "" }}{{ state }}</span>
   </p>
   <div v-else>
     <div class="resuming">
