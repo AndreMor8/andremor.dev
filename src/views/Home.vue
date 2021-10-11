@@ -27,7 +27,7 @@
       <p>
         <span
           >My email:
-          <a href="mailto:andre@gidget.xyz">andre@gidget.xyz</a></span
+          <a href="mailto:me@andremor.dev">me@andremor.dev</a></span
         >
       </p>
       <p>
@@ -41,7 +41,7 @@
         <span>My other projects</span>
       </h1>
       <p>
-        <span><a href="https://gidget.xyz">Gidget bot and dashboard</a></span>
+        <span><a href="https://gidget.andremor.dev">Gidget bot and dashboard</a></span>
       </p>
       <p>
         <span><a href="https://wubbworld.xyz">Wubbworld website</a></span>
@@ -161,7 +161,7 @@ export default {
   },
   methods: {
     getPresence() {
-      this.axios.get("https://gidget.xyz/api/presence").then((e) => {
+      this.axios.get("https://gidget.andremor.dev/api/presence").then((e) => {
         this.status = e.data.status;
         this.activities = this.activities.concat(e.data.activities);
         this.loaded = true;
