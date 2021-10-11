@@ -1,4 +1,4 @@
-# andremor.ml
+# andremor.dev
 
 ## Project setup
 ```

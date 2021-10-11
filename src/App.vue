@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     getTag() {
-      this.axios.get("https://gidget.xyz/api/andremor").then(e => {
+      this.axios.get("https://gidget.andremor.dev/api/andremor").then(e => {
         this.andremor = e.data;
       });
     }
