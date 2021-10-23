@@ -1,6 +1,6 @@
 <template>
   <p v-if="type === 4">
-    <span>{{ getEmoji }}{{ state ? " -> " : "" }}{{ state }}</span>
+    <span>{{ readyEmoji }}{{ state ? " -> " : "" }}{{ state }}</span>
   </p>
   <div v-else>
     <div class="resuming">
@@ -19,13 +19,13 @@
 
 <script>
 export default {
+  data: function () {
+    return {
+      readyEmoji: "",
+    };
+  },
   props: ["type", "state", "name", "emoji", "details"],
   computed: {
-    getEmoji() {
-      if (!this.emoji.id) return this.emoji.name;
-      else
-        return `<img src="https://cdn.discordapp.com/emojis/${this.emoji.id}.png" width="1.375em" height="1.375em">`;
-    },
     getType() {
       const types = [
         "Playing",
@@ -36,6 +36,14 @@ export default {
         "Competing",
       ];
       return types[this.type];
+    },
+  },
+  methods: {
+    getEmoji() {
+      if (!this.emoji) undefined;
+      else if (!this.emoji.id) this.readyEmoji = this.emoji.name;
+      else
+        this.readyEmoji = `<img src="https://cdn.discordapp.com/emojis/${this.emoji.id}.png" width="1.375em" height="1.375em">`;
     },
   },
 };
