@@ -26,8 +26,7 @@
       </p>
       <p>
         <span
-          >My email:
-          <a href="mailto:me@andremor.dev">me@andremor.dev</a></span
+          >My email: <a href="mailto:me@andremor.dev">me@andremor.dev</a></span
         >
       </p>
       <p>
@@ -35,19 +34,26 @@
           >My GitHub: <a href="https://github.com/AndreMor8">AndreMor8</a></span
         >
       </p>
+      <p>
+        <span><a href="gemini://gmi.andremor.dev">Gemini capsule</a></span>
+      </p>
     </div>
     <div id="home-right">
       <h1>
         <span>My other projects</span>
       </h1>
       <p>
-        <span><a href="https://gidget.andremor.dev">Gidget bot and dashboard</a></span>
+        <span
+          ><a href="https://gidget.andremor.dev"
+            >Gidget bot and dashboard</a
+          ></span
+        >
       </p>
       <p>
         <span><a href="https://wubbworld.xyz">Wubbworld website</a></span>
       </p>
       <p>
-        <span><a href="https://retrokids.cf">RetroKids</a></span>
+        <span><a href="https://retrokids.cf">Retro Kids</a></span>
       </p>
       <h1>
         <span>Where do you find me?</span>
@@ -66,7 +72,16 @@
       </p>
       <p>
         <span
-          ><a href="https://discord.gg/W2PYJA5rMd">Sonicrush007's server</a>
+          ><a href="https://discord.gg/W2PYJA5rMd">Billy's server</a> (Testing
+          with VMs)</span
+        >
+      </p>
+      <p>
+        <span
+          ><a href="https://discord.gg/7JHTxgMwcy"
+            >De devs para devs(ovo)b (Developer stuff, Discord news, lots of
+            offtopic)</a
+          >
           (Testing with VMs)</span
         >
       </p>
