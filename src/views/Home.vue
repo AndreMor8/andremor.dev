@@ -78,12 +78,9 @@
       </p>
       <p>
         <span
-          ><a href="https://discord.gg/7JHTxgMwcy"
-            >De devs para devs(ovo)b (Developer stuff, Discord news, lots of
-            offtopic)</a
-          >
-          (Testing with VMs)</span
-        >
+          ><a href="https://discord.gg/7JHTxgMwcy">De devs para devs(ovo)b</a>
+          (Developer stuff, Discord news)
+        </span>
       </p>
       <div v-if="loaded">
         <h1>
