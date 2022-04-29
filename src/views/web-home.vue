@@ -22,9 +22,6 @@
         ><span>Go to my user page on Wubbzypedia</span></a
       >
       <p>
-        <span>My Discord: {{ andremor }}</span>
-      </p>
-      <p>
         <span
           >My email: <a href="mailto:me@andremor.dev">me@andremor.dev</a></span
         >
@@ -66,38 +63,18 @@
       </p>
       <p>
         <span
-          ><a href="https://discord.gg/g6ssSmK">MyBOT Team</a> (Discord bot
-          related things)</span
-        >
-      </p>
-      <p>
-        <span
           ><a href="https://discord.gg/W2PYJA5rMd">Billy's server</a> (Testing
           with VMs)</span
         >
       </p>
-      <p>
-        <span
-          ><a href="https://discord.gg/7JHTxgMwcy">De devs para devs(ovo)b</a>
-          (Developer stuff, Discord news)
-        </span>
-      </p>
-      <div v-if="loaded">
+      <div>
         <h1>
           <span>What am I thinking/doing?</span>
         </h1>
-        <p>
-          <span><b>Status</b> -> {{ getStatus }} </span>
-        </p>
-        <Presence
-          v-for="activity of activities"
-          :key="activity.id"
-          :type="activity.type"
-          :state="activity.state"
-          :name="activity.name"
-          :emoji="activity.emoji"
-          :details="activity.details"
-        ></Presence>
+        <img
+          src="https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=I can be studying, sleeping, or in real life"
+          alt="Something happened!"
+        />
       </div>
     </div>
   </div>
@@ -141,15 +118,10 @@
 </style>
 
 <script>
-import Presence from "../components/presence.vue";
 import { YoutubeVue3 } from "youtube-vue3";
 export default {
-  props: ["andremor"],
-  data: function () {
-    return { loaded: false, status: "offline", activities: [] };
-  },
-  name: "Home",
-  components: { YoutubeVue3, Presence },
+  name: "web-home",
+  components: { YoutubeVue3 },
   computed: {
     myAge() {
       //Doing this in milliseconds caused an inaccuracy.
@@ -160,27 +132,6 @@ export default {
         if (today.getUTCDate() < birthday.getUTCDate()) age--;
       } else if (today.getUTCMonth() < birthday.getUTCMonth()) age--;
       return age;
-    },
-    getStatus() {
-      const types = {
-        online: "🟢 Online",
-        idle: "🟡 Idle",
-        dnd: "🔴 Do not disturb",
-        offline: "⚫ Offline",
-      };
-      return types[this.status];
-    },
-  },
-  created: function () {
-    this.getPresence();
-  },
-  methods: {
-    getPresence() {
-      this.axios.get("https://gidget.andremor.dev/api/presence").then((e) => {
-        this.status = e.data.status;
-        this.activities = this.activities.concat(e.data.activities);
-        this.loaded = true;
-      });
     },
   },
 };

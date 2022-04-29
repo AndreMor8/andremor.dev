@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '../views/web-home.vue';
 import myStandard from '../views/my-vm-standard.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'web-home',
     component: Home
   },
   {
