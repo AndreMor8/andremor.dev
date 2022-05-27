@@ -16,7 +16,7 @@
         </p></router-link
       >
       <p><span>Favorite song!:</span></p>
-      <youtube-vue3 videoid="clE9Qg8_q88" :autoplay="0" />
+      <youtube-vue3 class="yt-vid" videoid="clE9Qg8_q88" :autoplay="0" />
       <br /><br />
       <a href="https://wubbzy.fandom.com/wiki/User:AndreMor"
         ><span>Go to my user page on Wubbzypedia</span></a
@@ -52,6 +52,9 @@
       <p>
         <span><a href="https://retrokids.cf">Retro Kids</a></span>
       </p>
+      <p>
+        <span><a href="https://billy-o-reilly.andremor.dev">Billy O'Reilly's build requests website</a></span>
+      </p>
       <h1>
         <span>Where do you find me?</span>
       </h1>
@@ -71,9 +74,9 @@
         <h1>
           <span>What am I thinking/doing?</span>
         </h1>
-        <img
+        <img id="discord-pr"
           src="https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=I can be studying, sleeping, or in real life"
-          alt="Something happened!"
+          alt="Something happened!" width="90%"
         />
       </div>
     </div>
@@ -111,8 +114,11 @@
     display: block;
     position: relative;
   }
-  #youtube-vue-player-soma {
+  .yt-vid {
     width: auto !important;
+  }
+  #discord-pr {
+    width: 85%;
   }
 }
 </style>
