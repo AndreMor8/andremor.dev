@@ -26,7 +26,7 @@
       <lite-youtube playlabel="Wow! Wow! Wubbzy! - Pinta lo que quieras (Castellano)" class="yt-vid"
         videoid="red_UM0xLrU" /><br />
       <div class="box s-normal">
-        <p><a href="https://wubbzy.fandom.com/wiki/User:AndreMor">Go to my user page on Wubbzypedia</a></p>
+        <p><a href="https://wubbzy.fandom.com/wiki/User:AndreMor" target="_blank">Go to my user page on Wubbzypedia</a></p>
       </div>
       <div class="box s-normal">
         <p>
@@ -35,7 +35,7 @@
       </div>
       <div class="box s-normal">
         <p>
-          My GitHub: <a href="https://github.com/AndreMor8">AndreMor8</a>
+          My GitHub: <a href="https://github.com/AndreMor8" target="_blank">AndreMor8</a>
         </p>
       </div>
       <div class="box s-normal">
@@ -52,22 +52,22 @@
       </div>
       <div class="box s-normal">
         <p>
-          <a href="https://gidget.andremor.dev">Gidget bot and dashboard</a>
+          <a href="https://gidget.andremor.dev" target="_blank">Gidget bot and dashboard</a>
         </p>
       </div>
       <div class="box s-normal">
         <p>
-          <a href="https://wubbworld.xyz">Wubbworld website</a>
+          <a href="https://wubbworld.xyz" target="_blank">Wubbworld website</a>
         </p>
       </div>
       <div class="box s-normal">
         <p>
-          <a href="https://retrokids.eu.org">Retro Kids</a>
+          <a href="https://retrokids.eu.org" target="_blank">Retro Kids</a>
         </p>
       </div>
       <div class="box s-max">
         <p>
-          <a href="https://billy-o-reilly.andremor.dev">Billy O'Reilly's build requests website</a>
+          <a href="https://billy-o-reilly.andremor.dev" target="_blank">Billy O'Reilly's build requests website</a>
         </p>
       </div>
       <div class="box title s-max">
@@ -77,13 +77,13 @@
       </div>
       <div class="box s-normal">
         <p>
-          <a href="https://discord.gg/5qx9ZcV">Wow Wow Discord</a> (Wubbzy
+          <a href="https://discord.gg/5qx9ZcV" target="_blank">Wow Wow Discord</a> (Wubbzy
           things)
         </p>
       </div>
       <div class="box s-max">
         <p>
-          <a href="https://discord.gg/W2PYJA5rMd">Billy's server</a> (Testing
+          <a href="https://discord.gg/W2PYJA5rMd" target="_blank">Billy's server</a> (Testing
           with VMs)
         </p>
       </div>

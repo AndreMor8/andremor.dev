@@ -122,15 +122,16 @@
         settings.<br />Get special features with VMware 6.5.2 drivers<br />More
         information here:
         <a href="https://longhorn.ms/desktop-compositing/" target="_blank">https://longhorn.ms/desktop-compositing/</a>
-        <br/><br/>
+        <br /><br />
         For the post-reset builds: with VMware 10.x support, with the default
         settings.<br />
         Get special features with VMware 11.x (or 14.x) WDDM drivers.<br />More
         information here:
         <a href="https://www.betaarchive.com/forum/viewtopic.php?t=34077"
           target="_blank">https://www.betaarchive.com/forum/viewtopic.php?t=34077</a>
-          <br/>Some builds like 5219 may require you to use a VMware (the program itself) version minor than 12, using higher versions break the way DWM works in this build (flickering screen)
-          <br /><br />For these two, remember
+        <br />Some builds like 5219 may require you to use a VMware (the program itself) version minor than 12, using
+        higher versions break the way DWM works in this build (flickering screen)
+        <br /><br />For these two, remember
         to enable 3D acceleration.
       </div>
 
@@ -161,7 +162,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .large {
   padding: 8px;
   background-color: #00ffbbdb;
@@ -176,7 +177,11 @@
 
 @media only screen and (max-width: 1024px) {
   #list {
-    margin-left: -30px;
+    padding: 0;
+  }
+
+  #list>.box {
+    margin: auto
   }
 }
 </style>
