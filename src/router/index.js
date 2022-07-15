@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/web-home.vue';
-import myStandard from '../views/my-vm-standard.vue';
 
 const routes = [
   {
@@ -11,7 +10,9 @@ const routes = [
   {
     path: '/my-vm-standard',
     name: 'my-vm-standard',
-    component: myStandard
+    component: async function () {
+      return await import('../views/my-vm-standard.vue');
+    }
   }
 ];
 
