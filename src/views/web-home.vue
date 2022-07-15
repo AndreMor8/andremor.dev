@@ -26,7 +26,8 @@
       <lite-youtube playlabel="Wow! Wow! Wubbzy! - Pinta lo que quieras (Castellano)" class="yt-vid"
         videoid="red_UM0xLrU" /><br />
       <div class="box s-normal">
-        <p><a href="https://wubbzy.fandom.com/wiki/User:AndreMor" target="_blank">Go to my user page on Wubbzypedia</a></p>
+        <p><a href="https://wubbzy.fandom.com/wiki/User:AndreMor" target="_blank">Go to my user page on Wubbzypedia</a>
+        </p>
       </div>
       <div class="box s-normal">
         <p>
@@ -128,7 +129,8 @@
     position: relative;
   }
 
-  #home-left>.box {
+  #home-left>.box,
+  lite-youtube {
     margin: auto;
   }
 
