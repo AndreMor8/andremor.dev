@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div class="container">
     <div id="home-left">
       <div class="box title s-max">
         <h1>Hello World!</h1>
@@ -23,8 +23,8 @@
       <div class="box s-min">
         <p>Favorite song!:</p>
       </div>
-      <lite-youtube playlabel="Wow! Wow! Wubbzy! - Pinta lo que quieras (Castellano)" class="yt-vid"
-        videoid="red_UM0xLrU" /><br />
+      <lite-youtube playlabel="Wow! Wow! Wubbzy! - Con mis amigos (Latino)" class="yt-vid" videoid="rE72a-u1iNg" />
+      <br />
       <div class="box s-normal">
         <p><a href="https://wubbzy.fandom.com/wiki/User:AndreMor" target="_blank">Go to my user page on Wubbzypedia</a>
         </p>
@@ -100,53 +100,26 @@
   </div>
 </template>
 
-<style>
-#home-left {
-  display: inline-block;
-  position: absolute;
-  padding: 11px;
-}
-
-#home-right {
-  position: absolute;
-  right: 0;
-  text-align: center;
-  display: inline-block;
-  padding: 11px;
-}
-
+<style scoped>
 #home-right>.box {
   margin: auto;
 }
 
-@media only screen and (max-width: 1024px) {
-  body {
-    text-align: center !important;
-  }
+@media only screen and (max-width: 1050px) {
 
   #home-left {
-    display: block;
-    position: relative;
+    margin-bottom: 1rem;
   }
 
-  #home-left>.box,
-  lite-youtube {
+  #home-left>.box {
     margin: auto;
-  }
-
-  #home-right {
-    display: block;
-    position: relative;
-  }
-
-  .yt-vid {
-    width: auto !important;
   }
 
   #discord-pr {
     width: 85%;
     height: 85%;
   }
+
 }
 </style>
 

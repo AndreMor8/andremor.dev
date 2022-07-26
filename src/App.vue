@@ -19,6 +19,12 @@ a {
   color: #0000ff;
 }
 
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .box {
   background-color: #fffacde0;
   width: fit-content;
@@ -45,5 +51,20 @@ a {
 
 .s-max:not(:last-child) {
   margin-bottom: 1rem !important;
+}
+
+@media only screen and (max-width: 1050px) {
+  body {
+    text-align: center !important;
+  }
+
+  lite-youtube {
+    margin: auto;
+    width: auto !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
 }
 </style>

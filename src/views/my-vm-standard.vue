@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <GoHome></GoHome>
     <div class="box s-normal">
       <h1>
@@ -163,6 +163,10 @@
 </template>
 
 <style scoped>
+.container {
+  flex-direction: column;
+}
+
 .large {
   padding: 8px;
   background-color: #00ffbbdb;
@@ -175,7 +179,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1050px) {
   #list {
     padding: 0;
   }
