@@ -5,6 +5,10 @@
 <style>
 html {
   background-image: linear-gradient(rgba(220, 220, 220, 0.80), rgba(220, 220, 220, 0.80)), url("./assets/background.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 ul {
