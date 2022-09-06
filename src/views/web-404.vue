@@ -1,20 +1,10 @@
 <template>
     <div class="container">
-        <div class="box title s-max">
-            <h1>Not found :(</h1>
-        </div>
-        <div class="box s-normal">
-            <p>I couldn't find the page you put in the address bar.</p>
+        <div class="box">
+            <h1 class="title">Route not found..., are you lost?</h1>
         </div>
     </div>
 </template>
-
-<style scoped>
-.container {
-  flex-direction: column;
-}
-
-</style>
 
 <script>
 export default {

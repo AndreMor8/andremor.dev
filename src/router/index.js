@@ -4,26 +4,27 @@ import web404 from '../views/web-404.vue';
 
 const routes = [
   {
-    path: '/',
-    name: 'web-home',
+    name: "web-home",
+    path: "/",
     component: Home
   },
   {
-    path: '/my-vm-standard',
-    name: 'my-vm-standard',
+    name: "my-vm-standard",
+    path: "/my-vm-standard",
     component: async function () {
       return await import('../views/my-vm-standard.vue');
     }
-  },
+  }
+  ,
   {
-    path: '/:pathMatch(.*)*',
-    name: '404',
+    name: "web-404",
+    path: "/:pathMatch(.*)*",
     component: web404
   }
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 });
 

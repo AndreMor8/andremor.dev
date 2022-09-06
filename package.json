@@ -1,25 +1,28 @@
 {
-  "name": "andremor.dev",
+  "name": "andremor",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 3245",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "bulma": "^0.9.4",
+    "bulma-prefers-dark": "^0.1.0-beta.1",
     "lite-youtube-embed": "^0.2.0",
-    "vue": "^3.2.37",
-    "vue-axios": "^3.2.4",
-    "vue-router": "^4.1.2"
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "@vue/compiler-sfc": "^3.2.37",
-    "eslint": "^8.20.0",
-    "eslint-plugin-vue": "^9.3.0"
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^8.23.0",
+    "eslint-plugin-vue": "^9.4.0",
+    "lint-staged": "^13.0.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   }
 }

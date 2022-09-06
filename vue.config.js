@@ -14,5 +14,11 @@ module.exports = {
                 };
                 return options;
             })
+    },
+    configureWebpack: {
+        performance: {
+            maxEntrypointSize: 512000,
+            maxAssetSize: 512000,
+        }
     }
 }
