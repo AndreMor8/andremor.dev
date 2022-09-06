@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class="columns">
+    <div id="about" class="container">
         <div class="box column">
             <figure class="image is-128x128 block">
                 <img class="is-rounded" src="../assets/avatar.webp" alt="AndreMor's avatar" width="128" height="128">
