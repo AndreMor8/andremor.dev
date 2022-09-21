@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import myAvatar from "../assets/avatar.webp";
+import Panels from "../components/panels.vue";
+
+function myAge() {
+	//Doing this in milliseconds caused an inaccuracy.
+	const birthday = new Date("09 Aug 2004 GMT-5");
+	const today = new Date();
+	let age = today.getUTCFullYear() - birthday.getUTCFullYear();
+	if (today.getUTCMonth() == birthday.getUTCMonth()) {
+		if (today.getUTCDate() < birthday.getUTCDate()) age--;
+	} else if (today.getUTCMonth() < birthday.getUTCMonth()) age--;
+	return age;
+}
+---
+
+<Layout title="AndreMor's website" description="My personal page :)">
+	<div id="about" class="container" style="padding: 2rem !important;">
+		<div class="box column">
+			<figure class="image is-128x128 block">
+				<img
+					class="is-rounded"
+					src={myAvatar}
+					alt="AndreMor's avatar"
+					width="128"
+					height="128"
+				/>
+			</figure>
+			<h1 class="title">Hello world! I'm AndreMor</h1>
+			<p class="content">
+				A {myAge()} year old boy who likes computer science, programming
+				and cartoon's animation for children.
+			</p>
+			<p class="content">
+				Since I was little, I like almost everything related to
+				technology, and also very curious about various things,<br /> making
+				me have a lot of knowledge from an early age regarding computers.
+			</p>
+		</div>
+		<Panels client:load></Panels>
+	</div>
+</Layout>
+
+<style is:global>
+	#about {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	#horizontal {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	.box {
+		display: flex !important;
+		flex-direction: column;
+		padding: 1.25rem !important;
+	}
+	#about > .box {
+		align-items: center;
+	}
+	#horizontal > .box {
+		min-height: 26rem;
+	}
+	.box > .container {
+		display: flex;
+		align-items: center;
+	}
+	.container > ul > li {
+		padding: 0.3rem;
+	}
+</style>

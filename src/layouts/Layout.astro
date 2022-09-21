@@ -1,0 +1,76 @@
+---
+import "bulma/css/bulma.min.css";
+import "bulma-prefers-dark/css/bulma-prefers-dark.min.css";
+import "lite-youtube-embed/src/lite-yt-embed.css";
+
+export interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#ffdd57" />
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="object" />
+		<meta property="og:url" content="https://andremor.dev" />
+		<meta property="og:description" content={description} />
+		<meta name="keywords" content="AndreMor" />
+		<meta name="author" content="AndreMor" />
+	</head>
+	<body>
+		<slot />
+		<style>
+			html {
+				background-image: linear-gradient(
+						rgba(220, 220, 220, 0.8),
+						rgba(220, 220, 220, 0.8)
+					),
+					url("/background.webp");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				background-position: center;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				html {
+					background-image: linear-gradient(
+							rgba(10, 10, 10, 0.94),
+							rgba(10, 10, 10, 0.94)
+						),
+						url("/background.webp");
+				}
+			}
+		</style>
+
+		<style is:global>
+			code {
+				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+					monospace;
+			}
+			ul {
+				display: table;
+				list-style: inside !important;
+			}
+			.box {
+				text-align: -webkit-center;
+				overflow-wrap: anywhere;
+			}
+			.hide {
+				display: none !important;
+			}
+		</style>
+	</body>
+</html>
