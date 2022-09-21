@@ -19,5 +19,5 @@ export default defineConfig({
 
       }
     }
-  }), purgecss()]
+  }), purgecss({ safelist: ['lty-playbtn', 'lyt-activated', 'lyt-visually-hidden', 'iframe'] })]
 });
