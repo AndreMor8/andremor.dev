@@ -61,6 +61,14 @@ const { title, description } = Astro.props;
 			}
 		</style>
 		<style is:global>
+			@media (prefers-color-scheme: dark) {
+				.modal-card-body {
+					background-color: #0a0a0a !important;
+				}
+				.modal-background {
+					background-color: rgba(10, 10, 10, 0.86) !important;
+				}
+			}
 			.box {
 				text-align: -webkit-center;
 				overflow-wrap: anywhere;
