@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="About me, flash summary - AndreMor's website"
+    description="If you know me, you should know these things"
+>
+    <div class="box">
+        <h1 class="title">About me - Flash summary</h1>
+    </div>
+
+    <div class="box">
+        <h2 class="subtitle">Do you want to know more about me?</h2>
+        <p class="content">
+            Visit my <a
+                href="https://gemini.circumlunar.space/"
+                target="_blank"
+                rel="noopener noreferrer">Gemini</a
+            > capsule<br />Where I'm a bit more open with what I talk about
+        </p>
+        <a class="content" href="gemini://gmi.andremor.dev"
+            >gemini://gmi.andremor.dev</a
+        >
+    </div>
+
+    <div class="box">
+        <ul id="main">
+            <li>I am a fairly calm, neutral and curious boy.</li>
+            <li>
+                Quite different than my social group but compatible with
+                different external personalities and ways of life.<br
+                />(simpler: I can be friends with the vast majority)
+            </li>
+            <li>
+                You can be the best of the friends that I have, or simply a
+                person that I met and that's it, but I love all of them equally
+            </li>
+            <li>
+                A boy who can change his person when the context of life asks
+                for it<br />(I'm already going for personality v3, since 2015)
+            </li>
+            <li>A boy of multiple specific likings.</li>
+            <li>
+                A boy who always tries to be as original as possible but doesn't
+                have an idea to start with.
+            </li>
+            <li>
+                A boy who likes things to be direct, and if possible, detailed.
+            </li>
+            <li>
+                A boy who values everything he has, even if it doesn't seem like
+                it<br />(I can criticize or give an opinion on an object, but
+                never despise it)
+            </li>
+            <li>
+                A boy who only defines trust with real acts in post-relationship<br
+                />(yes, a simple word can also be part of a real act)
+            </li>
+            <li>
+                More general things:<br /><ul>
+                    <li>I live in Peru</li>
+                    <li>Middle class economy</li>
+                    <li>Semi-stable family</li>
+                    <li>Neutral most of the time</li>
+                    <li>Always trying to stand out where I can</li>
+                    <li>I like technology (focused more on software)</li>
+                    <li>
+                        Unless there is an event, I am almost always on a
+                        computer doing something (or studying)
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</Layout>
+
+<style>
+    #main > li:not(:last-child) {
+        margin-bottom: 1.2rem !important;
+    }
+</style>

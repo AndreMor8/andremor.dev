@@ -1,7 +1,6 @@
 ---
 import "bulma/css/bulma.min.css";
 import "bulma-prefers-dark/css/bulma-prefers-dark.min.css";
-import "lite-youtube-embed/src/lite-yt-embed.css";
 
 export interface Props {
 	title: string;
@@ -29,7 +28,9 @@ const { title, description } = Astro.props;
 		<meta name="author" content="AndreMor" />
 	</head>
 	<body>
-		<slot />
+		<div id="start" class="container">
+			<slot />
+		</div>
 		<style>
 			html {
 				background-image: linear-gradient(
@@ -52,24 +53,26 @@ const { title, description } = Astro.props;
 						url("/background.webp");
 				}
 			}
+			#start {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				padding: 1.5rem !important;
+			}
 		</style>
-
 		<style is:global>
-			code {
-				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-					monospace;
+			.box {
+				text-align: -webkit-center;
+				overflow-wrap: anywhere;
 			}
 			ul {
 				display: table;
 				list-style: inside !important;
 			}
-			.box {
-				text-align: -webkit-center;
-				overflow-wrap: anywhere;
-			}
-			.hide {
-				display: none !important;
+			code {
+				font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+					DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+					monospace;
 			}
 		</style>
 	</body>

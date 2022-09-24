@@ -3,15 +3,13 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="404 - AndreMor's website" description="Page not found">
-    <div class="container" style="padding: 2rem !important;">
-        <div class="box">
-            <h1 class="title">Page not found..., are you lost?</h1>
-        </div>
+    <div class="box">
+        <h1 class="title">Page not found..., are you lost?</h1>
     </div>
 </Layout>
 
 <script>
     setInterval(() => {
-        location.href = '/';
+        location.href = "/";
     }, 5000);
 </script>

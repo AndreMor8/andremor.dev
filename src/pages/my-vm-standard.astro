@@ -6,195 +6,175 @@ import Layout from "../layouts/Layout.astro";
     title="My VM standard - AndreMor's website"
     description="See how I configure the virtual machines to achieve a pretty nice result"
 >
-    <div class="container" style="padding: 2rem !important;">
-        <div class="box">
-            <h1 class="title">
-                My recommended standard when testing Windows beta versions
-            </h1>
-        </div>
-        <div class="box">
-            <p>
-                I was also in that background where I no longer knew whether to
-                test the betas as 16 colors or force myself to emulate it with
-                PCem, or run the beta without Aero or special graphic features,
-                even without a network, but here I will be recompiling which
-                virtualizers to use when testing certain Windows builds.
-            </p><br />
-            <p>
-                For me, having a pleasant speed, and having all the features of
-                the operating system active, is the best way to test a beta
-                version of Windows (hardware specific tests do not enter here),
-                so here is the list.
-            </p>
-        </div>
-        <div class="box">
-            <li class="subtitle">
-                Windows NT 3.1 build 475+, Windows NT 3.50 and 3.51 RTM
-            </li>
-        </div>
-        <div class="box">
-            I recommend using VirtualBox, using OS Windows NT 3.x.<br /><br />If
-            for some reason it fails, use Other Windows (32-bit).<br /><br />No,
-            giving them specific names doesn't help.<br /><br />Use the
-            VirtualBox video driver that is compatible from NT 3.1 to Windows 7.<br
-            /><br />Get networking with the AMD PC-NET driver.
-        </div>
-        <div class="box">
-            <li class="subtitle">
-                Windows 9x versions less than Windows 95 B, Windows NT versions
-                less than NT 4.0
-            </li>
-        </div>
+    <div class="box">
+        <h1 class="title">
+            My recommended standard when testing Windows beta versions
+        </h1>
+    </div>
+    <div class="box">
+        <p>
+            I was also in that background where I no longer knew whether to test
+            the betas as 16 colors or force myself to emulate it with PCem, or
+            run the beta without Aero or special graphic features, even without
+            a network, but here I will be recompiling which virtualizers to use
+            when testing certain Windows builds.
+        </p><br />
+        <p>
+            For me, having a pleasant speed, and having all the features of the
+            operating system active, is the best way to test a beta version of
+            Windows (hardware specific tests do not enter here), so here is the
+            list.
+        </p>
+    </div>
+    <div class="box">
+        <li class="subtitle">
+            Windows NT 3.1 build 475+, Windows NT 3.50 and 3.51 RTM
+        </li>
+    </div>
+    <div class="box">
+        I recommend using VirtualBox, using OS Windows NT 3.x.<br /><br />If for
+        some reason it fails, use Other Windows (32-bit).<br /><br />No, giving
+        them specific names doesn't help.<br /><br />Use the VirtualBox video
+        driver that is compatible from NT 3.1 to Windows 7.<br /><br />Get
+        networking with the AMD PC-NET driver.
+    </div>
+    <div class="box">
+        <li class="subtitle">
+            Windows 9x versions less than Windows 95 B, Windows NT versions less
+            than NT 4.0
+        </li>
+    </div>
 
-        <div class="box">
-            For 16-bit versions: I only know that Virtual PC 2007 can run on
-            certain versions, if in any case something fails you should use an
-            emulator like PCem.<br /><br />
-            For 32-bit versions (NT): I recommend VirtualBox, use the video driver
-            that is compatible from NT 3.1 to Windows 7.
-        </div>
-        <div class="box">
-            <li class="subtitle">Windows 95 version B or higher</li>
-        </div>
+    <div class="box">
+        For 16-bit versions: I only know that Virtual PC 2007 can run on certain
+        versions, if in any case something fails you should use an emulator like
+        PCem.<br /><br />
+        For 32-bit versions (NT): I recommend VirtualBox, use the video driver that
+        is compatible from NT 3.1 to Windows 7.
+    </div>
+    <div class="box">
+        <li class="subtitle">Windows 95 version B or higher</li>
+    </div>
 
-        <div class="box">
-            I recommend VMware, with the default settings.<br /><br />
-            Get sound with setting the sound adapter to SoundBlaster 16.<br
-            /><br />
-            VM Tweaker:
-            <a
-                href="https://sourceforge.net/projects/vmtweaker/files/latest/download"
-                target="_blank"
-                rel="noreferrer noopener"
-                >https://sourceforge.net/projects/vmtweaker/files/latest/download</a
-            >
-        </div>
-        <div class="box">
-            <li class="subtitle">Windows 98 build 4.10.1691.3 or minor</li>
-        </div>
+    <div class="box">
+        I recommend VMware, with the default settings.<br /><br />
+        Get sound with setting the sound adapter to SoundBlaster 16.<br /><br />
+        VM Tweaker:
+        <a
+            href="https://sourceforge.net/projects/vmtweaker/files/latest/download"
+            target="_blank"
+            rel="noreferrer noopener"
+            >https://sourceforge.net/projects/vmtweaker/files/latest/download</a
+        >
+    </div>
+    <div class="box">
+        <li class="subtitle">Windows 98 build 4.10.1691.3 or minor</li>
+    </div>
 
-        <div class="box">
-            I recommend VirtualBox, use it with Legacy virtualization mode
-            without Nested Paging, with OS Windows 95, and without enabling
-            ACPI, everything else by default.<br /><br />You can get 32-bit mode
-            with a generic VESA driver.<br /><br />Disable ACPI on VirtualBox:<br
-            /><br />
-            <pre>VBoxManage modifyvm "myname" --acpi off</pre>
-        </div>
+    <div class="box">
+        I recommend VirtualBox, use it with Legacy virtualization mode without
+        Nested Paging, with OS Windows 95, and without enabling ACPI, everything
+        else by default.<br /><br />You can get 32-bit mode with a generic VESA
+        driver.<br /><br />Disable ACPI on VirtualBox:<br /><br />
+        <pre>VBoxManage modifyvm "myname" --acpi off</pre>
+    </div>
 
-        <div class="box">
-            <li class="subtitle">Windows 98 build 4.10.1702 or higher</li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows 98 build 4.10.1702 or higher</li>
+    </div>
 
-        <div class="box">
-            I recommend VMware, with the default settings.<br /><br />Remember
-            the driver that had to be installed manually with Windows 95? Use
-            that to get 32-bit mode.<br /><br />
-            Get sound with setting the sound adapter to SoundBlaster 16.
-        </div>
+    <div class="box">
+        I recommend VMware, with the default settings.<br /><br />Remember the
+        driver that had to be installed manually with Windows 95? Use that to
+        get 32-bit mode.<br /><br />
+        Get sound with setting the sound adapter to SoundBlaster 16.
+    </div>
 
-        <div class="box">
-            <li class="subtitle">Windows 2000 (any beta)</li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows 2000 (any beta)</li>
+    </div>
 
-        <div class="box">
-            It will depend on the build. Some builds work with VMware with
-            6.5-7.x compatibility mode without ACPI, if this is the case:<br
-            /><br />
-            -&gt; Use the video driver that Windows NT 4.0 uses.<br />
-            -&gt; Use the VMware 6.5 drivers.<br /><br />
-            If it fails with VMware, use VirtualBox (if it fails, without enabling
-            ACPI, see
-            <a
-                href="https://www.betaarchive.com/forum/viewtopic.php?p=448150#p448150"
-                target="_blank"
-                rel="noreferrer noopener">here</a
-            >), everything else by default.<br /><br />Use the VirtualBox video
-            driver that is compatible from NT 3.1 to Windows 7.<br /><br
-            />Disable ACPI on VMware (Put this in the last line of the VM's
-            .vmx):<br /><br />
-            <pre>acpi.present = "FALSE"</pre>
-        </div>
+    <div class="box">
+        It will depend on the build. Some builds work with VMware with 6.5-7.x
+        compatibility mode without ACPI, if this is the case:<br /><br />
+        -&gt; Use the video driver that Windows NT 4.0 uses.<br />
+        -&gt; Use the VMware 6.5 drivers.<br /><br />
+        If it fails with VMware, use VirtualBox (if it fails, without enabling ACPI,
+        see
+        <a
+            href="https://www.betaarchive.com/forum/viewtopic.php?p=448150#p448150"
+            target="_blank"
+            rel="noreferrer noopener">here</a
+        >), everything else by default.<br /><br />Use the VirtualBox video
+        driver that is compatible from NT 3.1 to Windows 7.<br /><br />Disable
+        ACPI on VMware (Put this in the last line of the VM's .vmx):<br /><br />
+        <pre>acpi.present = "FALSE"</pre>
+    </div>
 
-        <div class="box">
-            <li class="subtitle">
-                Windows Neptune, Windows Whistler (any beta)
-            </li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows Neptune, Windows Whistler (any beta)</li>
+    </div>
 
-        <div class="box">
-            I recommend VMware, with VMware 6.5-7.x support, with the default
-            settings, and disabling ACPI if installation fails.<br /><br />Get
-            32-bit mode and sound with VMware 7.0 drivers.
-        </div>
+    <div class="box">
+        I recommend VMware, with VMware 6.5-7.x support, with the default
+        settings, and disabling ACPI if installation fails.<br /><br />Get
+        32-bit mode and sound with VMware 7.0 drivers.
+    </div>
 
-        <div class="box">
-            <li class="subtitle">Windows Longhorn (any beta)</li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows Longhorn (any beta)</li>
+    </div>
 
-        <div class="box">
-            I recommend VMware.<br /><br />
-            Get sound with VMware 7.0 drivers
-            <br /><br />
-            For the pre-reset builds, with VMware 6.5-7.x support, with the default
-            settings.<br />Get special features with VMware 6.5.2 drivers<br
-            />More information here:
-            <a
-                href="https://longhorn.ms/desktop-compositing/"
-                target="_blank"
-                rel="noreferrer noopener"
-                >https://longhorn.ms/desktop-compositing/</a
-            >
-            <br /><br />
-            For the post-reset builds: with VMware 10.x support, with the default
-            settings.<br />
-            Get special features with VMware 11.x (or 14.x) WDDM drivers.<br
-            />More information here:
-            <a
-                href="https://www.betaarchive.com/forum/viewtopic.php?t=34077"
-                target="_blank"
-                rel="noreferrer noopener"
-                >https://www.betaarchive.com/forum/viewtopic.php?t=34077</a
-            >
-            <br />Some builds like 5219 may require you to use a VMware (the
-            program itself) version minor than 12, using higher versions break
-            the way DWM works in this build (flickering screen)
-            <br /><br />For these two, remember to enable 3D acceleration.
-        </div>
+    <div class="box">
+        I recommend VMware.<br /><br />
+        Get sound with VMware 7.0 drivers
+        <br /><br />
+        For the pre-reset builds, with VMware 6.5-7.x support, with the default settings.<br
+        />Get special features with VMware 6.5.2 drivers<br />More information
+        here:
+        <a
+            href="https://longhorn.ms/desktop-compositing/"
+            target="_blank"
+            rel="noreferrer noopener"
+            >https://longhorn.ms/desktop-compositing/</a
+        >
+        <br /><br />
+        For the post-reset builds: with VMware 10.x support, with the default settings.<br
+        />
+        Get special features with VMware 11.x (or 14.x) WDDM drivers.<br />More
+        information here:
+        <a
+            href="https://www.betaarchive.com/forum/viewtopic.php?t=34077"
+            target="_blank"
+            rel="noreferrer noopener"
+            >https://www.betaarchive.com/forum/viewtopic.php?t=34077</a
+        >
+        <br />Some builds like 5219 may require you to use a VMware (the program
+        itself) version minor than 12, using higher versions break the way DWM
+        works in this build (flickering screen)
+        <br /><br />For these two, remember to enable 3D acceleration.
+    </div>
 
-        <div class="box">
-            <li class="subtitle">Windows 7 (any beta)</li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows 7 (any beta)</li>
+    </div>
 
-        <div class="box">
-            I recommend VMware, with VMware 10.x support, with the default
-            settings.<br /><br />Get Aero features with VMware 11.x (or 14.x)
-            WDDM drivers, remember to enable 3D acceleration.
-        </div>
+    <div class="box">
+        I recommend VMware, with VMware 10.x support, with the default settings.<br
+        /><br />Get Aero features with VMware 11.x (or 14.x) WDDM drivers,
+        remember to enable 3D acceleration.
+    </div>
 
-        <div class="box">
-            <li class="subtitle">Windows 8 and 10 (any beta)</li>
-        </div>
+    <div class="box">
+        <li class="subtitle">Windows 8 and 10 (any beta)</li>
+    </div>
 
-        <div class="box">
-            With the exception of the Windows 8 builds that still have Aero, use
-            VMware, with VMware 10.x support, with the default settings, using
-            the 11.x (or 14.x) drivers with 3D acceleration enabled.<br /><br
-            />After that, I don't think it makes sense to recommend
-            virtualizers, after all they are recent systems, and any virtualizer
-            should run them.<br /><br />If you still want my opinion, use VMware
-            with the default options.
-        </div>
+    <div class="box">
+        With the exception of the Windows 8 builds that still have Aero, use
+        VMware, with VMware 10.x support, with the default settings, using the
+        11.x (or 14.x) drivers with 3D acceleration enabled.<br /><br />After
+        that, I don't think it makes sense to recommend virtualizers, after all
+        they are recent systems, and any virtualizer should run them.<br /><br
+        />If you still want my opinion, use VMware with the default options.
     </div>
 </Layout>
-
-<style>
-    .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .box {
-        display: grid;
-    }
-</style>

@@ -1,23 +1,10 @@
 import { defineConfig } from 'astro/config';
-import vue from "@astrojs/vue";
-
 import purgecss from "astro-purgecss";
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue({
-    template: {
-      compilerOptions: {
-        isCustomElement(tag) {
-          switch (tag) {
-            case 'lite-youtube':
-              return true;
-            default:
-              return false;
-          }
-        }
-
-      }
-    }
-  }), purgecss({ safelist: ['lty-playbtn', 'lyt-activated', 'lyt-visually-hidden', 'iframe'] })]
+  integrations: [purgecss({
+    /*safelist: ['lty-playbtn', 'lyt-activated', 'lyt-visually-hidden', 'iframe']*/
+  }), alpinejs()]
 });

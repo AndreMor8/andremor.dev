@@ -1,7 +1,8 @@
 ---
+import "lite-youtube-embed/src/lite-yt-embed.css";
 import Layout from "../layouts/Layout.astro";
 import myAvatar from "../assets/avatar.webp";
-import Panels from "../components/panels.vue";
+import experiences from "../assets/experiences.js";
 
 function myAge() {
 	//Doing this in milliseconds caused an inaccuracy.
@@ -16,38 +17,252 @@ function myAge() {
 ---
 
 <Layout title="AndreMor's website" description="My personal page :)">
-	<div id="about" class="container" style="padding: 2rem !important;">
-		<div class="box column">
-			<figure class="image is-128x128 block">
-				<img
-					class="is-rounded"
-					src={myAvatar}
-					alt="AndreMor's avatar"
-					width="128"
-					height="128"
-				/>
-			</figure>
-			<h1 class="title">Hello world! I'm AndreMor</h1>
-			<p class="content">
-				A {myAge()} year old boy who likes computer science, programming
-				and cartoon's animation for children.
-			</p>
-			<p class="content">
-				Since I was little, I like almost everything related to
-				technology, and also very curious about various things,<br /> making
-				me have a lot of knowledge from an early age regarding computers.
-			</p>
+	<div id="bigbox" class="box column">
+		<figure class="image is-128x128 block">
+			<img
+				class="is-rounded"
+				src={myAvatar}
+				alt="AndreMor's avatar"
+				width="128"
+				height="128"
+			/>
+		</figure>
+		<h1 class="title">Hello world! I'm AndreMor</h1>
+		<p class="content">
+			A {myAge()} year old boy who likes computer science, programming and
+			cartoon's animation for children.
+		</p>
+		<p class="content">
+			Since I was little, I like almost everything related to technology,
+			and also very curious about various things,<br /> making me have a lot
+			of knowledge from an early age regarding computers.
+		</p>
+	</div>
+	<div id="horizontal" class="column columns container">
+		<div class="box column" x-data="{ opened: 'exp' }">
+			<div class="tabs is-centered is-boxed">
+				<ul>
+					<li
+						class="is-active"
+						x-bind:class="{ 'is-active': opened == 'exp' }"
+					>
+						<a
+							href="#"
+							x-on:click="opened = 'exp';$event.preventDefault();"
+						>
+							<span>Experiences</span>
+						</a>
+					</li>
+					<li x-bind:class="{ 'is-active': opened == 'fav' }">
+						<a
+							href="#"
+							x-on:click="opened = 'fav';$event.preventDefault();"
+						>
+							<span>Favorite song</span>
+						</a>
+					</li>
+					<li x-bind:class="{ 'is-active': opened == 'link' }">
+						<a
+							href="#"
+							x-on:click="opened = 'link';$event.preventDefault();"
+						>
+							<span>Social links</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div
+				x-data="{ modal_open: false, modal_title: '', modal_text: '' }"
+				class="container"
+				x-show="opened == 'exp'"
+				x-transition:enter
+			>
+				<ul>
+					{
+						experiences.map((e) => (
+							<li>
+								<a
+									href="#"
+									data-title={e[0]}
+									data-text={e[1]}
+									x-on:click="$event.preventDefault();modal_title = $el.dataset.title; modal_text = $el.dataset.text; modal_open = true;"
+								>
+									{e[2] ? <b>{e[0]}</b> : e[0]}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+				<div class="modal" x-bind:class="{ 'is-active': modal_open }">
+					<div
+						x-on:click="modal_open = false;"
+						class="modal-background"
+					>
+					</div>
+					<div class="modal-card">
+						<header class="modal-card-head">
+							<p class="modal-card-title" x-text="modal_title">
+							</p>
+							<button
+								x-on:click="modal_open = false;"
+								class="delete"
+								aria-label="close"></button>
+						</header>
+						<section
+							class="modal-card-body"
+							x-html="modal_text"
+							style="white-space: pre-wrap;"
+						>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div
+				id="cnt-yt"
+				class="container"
+				x-show="opened == 'fav'"
+				style="display: none;"
+				x-transition:enter
+			>
+				<lite-youtube
+					playlabel="Wow! Wow! Wubbzy! - Con mis amigos (Latino)"
+					videoid="rE72a-u1iNg"
+					style="background-image: url('https://i.ytimg.com/vi/rE72a-u1iNg/hqdefault.jpg');"
+				>
+					<button type="button" class="lty-playbtn"
+						><span class="lyt-visually-hidden"
+							>Wow! Wow! Wubbzy! - Con mis amigos (Latino)</span
+						>
+					</button>
+				</lite-youtube>
+			</div>
+			<div
+				class="container"
+				x-show="opened == 'link'"
+				style="display: none;"
+				x-transition:enter
+			>
+				<ul>
+					<li>
+						<a
+							href="https://wubbzy.fandom.com/wiki/User:AndreMor"
+							target="_blank"
+							rel="noreferrer noopener">Wubbzypedia profile</a
+						>
+					</li>
+					<li>
+						<a href="mailto:me@andremor.dev">me@andremor.dev</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/AndreMor8"
+							target="_blank"
+							rel="noreferrer noopener">GitHub</a
+						>
+					</li>
+					<li>
+						<a href="gemini://gmi.andremor.dev">Gemini capsule</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<Panels client:load></Panels>
+		<div class="box column" x-data="{ opened: 'prj' }">
+			<div class="tabs is-centered is-boxed">
+				<ul>
+					<li
+						class="is-active"
+						x-bind:class="{ 'is-active': opened == 'prj' }"
+					>
+						<a
+							href="#"
+							x-on:click="opened = 'prj';$event.preventDefault();"
+							><span>Projects</span>
+						</a>
+					</li>
+					<li x-bind:class="{ 'is-active': opened == 'dsc' }">
+						<a
+							href="#"
+							x-on:click="opened = 'dsc';$event.preventDefault();"
+							><span>Discord presence</span>
+						</a>
+					</li>
+					<li x-bind:class="{ 'is-active': opened == 'here' }">
+						<a
+							href="#"
+							x-on:click="opened = 'here';$event.preventDefault();"
+							><span>On this website</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="container" x-show="opened == 'prj'" x-transition:enter>
+				<ul>
+					<li>
+						<a
+							href="https://gidget.andremor.dev/"
+							target="_blank"
+							rel="noreferrer noopener"
+							>Gidget bot and dashboard</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://wubbworld.xyz/"
+							target="_blank"
+							rel="noreferrer noopener">Wubbworld website</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://retrokids.eu.org/"
+							target="_blank"
+							rel="noreferrer noopener">Retro Kids</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://billy-o-reilly.andremor.dev/"
+							target="_blank"
+							rel="noreferrer noopener"
+							>Billy O'Reilly's build requests website</a
+						>
+					</li>
+				</ul>
+			</div>
+			<div
+				class="container"
+				x-show="opened == 'dsc'"
+				style="display: none;"
+				x-transition:enter
+			>
+				<img
+					src="https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=I can be studying, sleeping, or in real life"
+					alt="Something happened!"
+				/>
+			</div>
+			<div
+				class="container"
+				x-show="opened == 'here'"
+				style="display: none;"
+				x-transition:enter
+			>
+				<ul>
+					<li>
+						<a href="/my-vm-standard"
+							>My standard of virtualizers when testing Windows
+							betas
+						</a>
+					</li>
+					<li>
+						<a href="/about-me-flash">About me - Flash summary</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </Layout>
 
-<style is:global>
-	#about {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-	}
+<style>
 	#horizontal {
 		display: flex;
 		justify-content: center;
@@ -57,9 +272,6 @@ function myAge() {
 		display: flex !important;
 		flex-direction: column;
 		padding: 1.25rem !important;
-	}
-	#about > .box {
-		align-items: center;
 	}
 	#horizontal > .box {
 		min-height: 26rem;
@@ -71,4 +283,49 @@ function myAge() {
 	.container > ul > li {
 		padding: 0.3rem;
 	}
+	#bigbox {
+		align-items: center;
+	}
+	#cnt-yt {
+		display: contents;
+	}
+	@media screen and (min-width: 1025px) {
+		#horizontal {
+			align-items: baseline;
+		}
+
+		#horizontal > .box {
+			width: 36rem;
+		}
+
+		.box {
+			margin: 1.2rem;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.tabs {
+			white-space: unset !important;
+		}
+
+		#horizontal {
+			align-items: center;
+			flex-direction: column;
+		}
+
+		#horizontal > .box {
+			width: auto !important;
+		}
+	}
+
+	@media screen and (max-width: 359px) {
+		.tabs {
+			width: 200px;
+			align-self: center;
+		}
+	}
 </style>
+
+<script>
+	import "lite-youtube-embed";
+</script>

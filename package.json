@@ -11,12 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vue": "^1.0.2",
+    "@astrojs/alpinejs": "^0.1.2",
+    "@types/alpinejs": "^3.7.0",
+    "alpinejs": "^3.10.3",
     "astro": "^1.2.8",
     "astro-purgecss": "^1.1.1",
     "bulma": "^0.9.4",
     "bulma-prefers-dark": "^0.1.0-beta.1",
-    "lite-youtube-embed": "^0.2.0",
-    "vue": "^3.2.39"
+    "lite-youtube-embed": "^0.2.0"
   }
 }
