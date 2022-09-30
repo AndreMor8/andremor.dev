@@ -236,8 +236,11 @@ function myAge() {
 				x-transition:enter
 			>
 				<img
-					src="https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=I can be studying, sleeping, or in real life"
-					alt="Something happened!"
+					loading="lazy"
+					src={`https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=${encodeURIComponent(
+						"I can be studying, sleeping, or in real life"
+					)}`}
+					alt="My Discord presence"
 				/>
 			</div>
 			<div
