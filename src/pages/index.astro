@@ -1,5 +1,6 @@
 ---
 import "lite-youtube-embed/src/lite-yt-embed.css";
+import { Image } from 'astro:assets';
 import Layout from "../layouts/Layout.astro";
 import myAvatar from "../assets/avatar.webp";
 import experiences from "../assets/experiences.js";
@@ -19,7 +20,7 @@ function myAge() {
 <Layout title="AndreMor's website" description="My personal page :)">
 	<div id="bigbox" class="box column">
 		<figure class="image is-128x128 block">
-			<img
+			<Image
 				class="is-rounded"
 				src={myAvatar}
 				alt="AndreMor's avatar"
@@ -37,9 +38,17 @@ function myAge() {
 		</p>
 	</div>
 	<div id="horizontal" class="column columns container">
-		<div class="box column" x-data="{ opened: 'exp' }">
+		<div class="box column" x-data="{ opened: 'link' }">
 			<div class="tabs is-centered is-boxed">
 				<ul>
+					<li x-bind:class="{ 'is-active': opened == 'link' }">
+						<a
+							href="#"
+							x-on:click="opened = 'link';$event.preventDefault();"
+						>
+							<span>Social links</span>
+						</a>
+					</li>
 					<li
 						class="is-active"
 						x-bind:class="{ 'is-active': opened == 'exp' }"
@@ -57,14 +66,6 @@ function myAge() {
 							x-on:click="opened = 'fav';$event.preventDefault();"
 						>
 							<span>Favorite song</span>
-						</a>
-					</li>
-					<li x-bind:class="{ 'is-active': opened == 'link' }">
-						<a
-							href="#"
-							x-on:click="opened = 'link';$event.preventDefault();"
-						>
-							<span>Social links</span>
 						</a>
 					</li>
 				</ul>
@@ -161,6 +162,14 @@ function myAge() {
 					<li>
 						<a href="gemini://gmi.andremor.dev">Gemini capsule</a>
 					</li>
+					<li>
+						<a
+							href="https://remarks.andremor.dev/index.php?/guestbook"
+							target="_blank"
+							rel="noreferrer noopener"
+							>My guestbook</a
+						>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -177,18 +186,18 @@ function myAge() {
 							><span>Projects</span>
 						</a>
 					</li>
-					<li x-bind:class="{ 'is-active': opened == 'dsc' }">
-						<a
-							href="#"
-							x-on:click="opened = 'dsc';$event.preventDefault();"
-							><span>Discord presence</span>
-						</a>
-					</li>
 					<li x-bind:class="{ 'is-active': opened == 'here' }">
 						<a
 							href="#"
 							x-on:click="opened = 'here';$event.preventDefault();"
 							><span>On this website</span>
+						</a>
+					</li>
+					<li x-bind:class="{ 'is-active': opened == 'dsc' }">
+						<a
+							href="#"
+							x-on:click="opened = 'dsc';$event.preventDefault();"
+							><span>Discord presence</span>
 						</a>
 					</li>
 				</ul>
@@ -223,6 +232,14 @@ function myAge() {
 							target="_blank"
 							rel="noreferrer noopener"
 							>Billy O'Reilly's build requests website</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://remarks.andremor.dev/"
+							target="_blank"
+							rel="noreferrer noopener"
+							>AndreMor's remarks, my photo gallery</a
 						>
 					</li>
 				</ul>
