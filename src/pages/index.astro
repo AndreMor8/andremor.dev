@@ -1,6 +1,6 @@
 ---
 import "lite-youtube-embed/src/lite-yt-embed.css";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import myAvatar from "../assets/avatar.webp";
 import experiences from "../assets/experiences.js";
@@ -34,14 +34,19 @@ function myAge() {
 			cartoon's animation for children.
 		</p>
 		<p class="content">
-			Ever since I was a little kid, I've loved almost everything related to technology. I'm also quite curious about various things.<br />This makes me quite knowledgeable about computers.
+			Ever since I was a little kid, I've loved almost everything related
+			to technology. I'm also quite curious about various things.<br
+			/>This makes me quite knowledgeable about computers.
 		</p>
 	</div>
 	<div id="horizontal" class="column columns container">
 		<div class="box column" x-data="{ opened: 'link' }">
 			<div class="tabs is-centered is-boxed">
 				<ul>
-					<li x-bind:class="{ 'is-active': opened == 'link' }">
+					<li
+						class="is-active"
+						x-bind:class="{ 'is-active': opened == 'link' }"
+					>
 						<a
 							href="#"
 							x-on:click="opened = 'link';$event.preventDefault();"
@@ -49,10 +54,7 @@ function myAge() {
 							<span>Social links</span>
 						</a>
 					</li>
-					<li
-						class="is-active"
-						x-bind:class="{ 'is-active': opened == 'exp' }"
-					>
+					<li x-bind:class="{ 'is-active': opened == 'exp' }">
 						<a
 							href="#"
 							x-on:click="opened = 'exp';$event.preventDefault();"
@@ -136,11 +138,7 @@ function myAge() {
 					</button>
 				</lite-youtube>
 			</div>
-			<div
-				class="container"
-				x-show="opened == 'link'"
-				x-transition:enter
-			>
+			<div class="container" x-show="opened == 'link'" x-transition:enter>
 				<ul>
 					<li>
 						<a
@@ -166,8 +164,7 @@ function myAge() {
 						<a
 							href="https://remarks.andremor.dev/index.php?/guestbook"
 							target="_blank"
-							rel="noreferrer noopener"
-							>My guestbook</a
+							rel="noreferrer noopener">My guestbook</a
 						>
 					</li>
 				</ul>
@@ -253,7 +250,7 @@ function myAge() {
 				<img
 					loading="lazy"
 					src={`https://lanyard.cnrad.dev/api/577000793094488085?idleMessage=${encodeURIComponent(
-						"I can be studying, sleeping, or in real life"
+						"I can be studying, sleeping, or in real life",
 					)}`}
 					alt="My Discord presence"
 				/>
