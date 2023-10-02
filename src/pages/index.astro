@@ -73,7 +73,8 @@ function myAge() {
 			<div
 				x-data="{ modal_open: false, modal_title: '', modal_text: '' }"
 				class="container"
-				x-show="opened == 'link'"
+				x-show="opened == 'exp'"
+				style="display: none;"
 				x-transition:enter
 			>
 				<ul>
@@ -138,7 +139,6 @@ function myAge() {
 			<div
 				class="container"
 				x-show="opened == 'link'"
-				style="display: none;"
 				x-transition:enter
 			>
 				<ul>
